@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp34
+{ /*4. Recursive Metot ile Fibonacci Dizisi Hesaplama
+
+Soru: Bir sayının Fibonacci dizisindeki karşılığını hesaplayan özyinelemeli (recursive) bir metot yazın. fibonacci(5) çağrısı, 
+    dizideki 5. Fibonacci sayısını döndürmelidir.İpucu: int dönen ve kendini çağırarak Fibonacci dizisi üreten bir metot yazmalısınız*/
+    class Program
+    {
+        static void Main(string[] args)
+        { Console.WriteLine(" Bir sayı giriniz:"); 
+            int i = int.Parse(Console.ReadLine()); 
+            int fibonacciSayisi = Fibonacci(i);
+            Console.WriteLine("Fibonacci sayısı: " +fibonacciSayisi); }
+        static int Fibonacci(int i) 
+        { 
+            if (i <= 1) 
+            { return i; } 
+            return Fibonacci(i - 1) + Fibonacci(i - 2); 
+        }
+    }
+}
